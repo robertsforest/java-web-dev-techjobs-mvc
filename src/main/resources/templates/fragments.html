@@ -27,5 +27,13 @@
         </div>
     </div>
 
+    <div th:fragment="job-list">
+        <table th:each="job : ${jobs}" class="job-listing">
+            <tr th:each="element : ${job.toString().trim().split('\n')}">
+                <td th:text="${element}"></td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
